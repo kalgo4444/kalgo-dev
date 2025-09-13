@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-neutral-950 dark:text-white duration-200;
+  }
+}
+
+@layer components {
+  button,
+  input,
+  textarea {
+    @apply border-2 border-neutral-300 disabled:opacity-70 rounded-md text-black text-lg font-semibold cursor-pointer outline-0 transition duration-200 bg-neutral-100;
+  }
+  input,
+  textarea {
+    @apply hover:border-blue-400 focus:border-blue-400 dark:bg-neutral-900 dark:text-white dark:border-neutral-700;
+  }
+  .container-header {
+    @apply max-w-[1540px] w-full mx-auto px-4;
+  }
+  .container {
+    @apply max-w-[1340px] w-full mx-auto px-5;
+  }
+  .btn {
+    @apply text-black dark:text-white hover:bg-neutral-200 hover:border-neutral-500 active:scale-95 disabled:opacity-60 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:border-neutral-600;
+  }
+  .navlink.active {
+    @apply bg-blue-400 rounded-2xl;
+  }
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+  .gridCenter {
+    @apply grid place-items-center;
+  }
+}

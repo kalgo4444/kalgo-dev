@@ -1,0 +1,8 @@
+.bg-liner {
+  background: #71c0fb;
+  background: linear-gradient(
+    336deg,
+    rgba(113, 192, 251, 1) 0%,
+    rgba(72, 85, 181, 1) 100%
+  );
+}
